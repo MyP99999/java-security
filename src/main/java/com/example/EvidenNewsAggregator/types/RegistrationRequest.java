@@ -2,6 +2,7 @@ package com.example.EvidenNewsAggregator.types;
 
 // RegistrationRequest.java
 
+
 import lombok.Data;
 import lombok.Getter;
 

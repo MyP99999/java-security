@@ -1,5 +1,6 @@
 package com.example.EvidenNewsAggregator.types;
 
+import com.example.EvidenNewsAggregator.entities.tables.pojos.Users;
 import com.example.EvidenNewsAggregator.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -7,7 +8,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
 import java.util.Collections;
 
 @Service
@@ -18,7 +18,7 @@ public class CustomUserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        com.jooq.sample.model.tables.pojos.Users user = userRepository.findByUsername(username);
+        Users user = userRepository.findByUsername(username);
         if (user == null) {
             throw new UsernameNotFoundException("User not found with username: " + username);
         }

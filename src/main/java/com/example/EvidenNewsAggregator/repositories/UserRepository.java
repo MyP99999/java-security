@@ -1,11 +1,11 @@
 package com.example.EvidenNewsAggregator.repositories;
 
-import com.example.EvidenNewsAggregator.model.Tables;
+import com.example.EvidenNewsAggregator.entities.Tables;
+import com.example.EvidenNewsAggregator.entities.tables.pojos.Users;
 import org.jooq.DSLContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
-import com.jooq.sample.model.tables.pojos.Users;
 
 import java.util.List;
 
@@ -14,6 +14,7 @@ public class UserRepository {
     private final DSLContext dslContext;
     @Autowired
     private PasswordEncoder passwordEncoder;
+
     @Autowired
     public UserRepository(DSLContext dslContext) {
         this.dslContext = dslContext;

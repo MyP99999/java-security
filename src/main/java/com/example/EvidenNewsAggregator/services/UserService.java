@@ -1,5 +1,6 @@
 package com.example.EvidenNewsAggregator.services;
 
+import com.example.EvidenNewsAggregator.entities.tables.pojos.Users;
 import com.example.EvidenNewsAggregator.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -20,11 +21,11 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public List<com.jooq.sample.model.tables.pojos.Users> getUsers() {
+    public List<Users> getUsers() {
         return userRepository.findAllUsers();
     }
 
-    public void saveUser(com.jooq.sample.model.tables.pojos.Users user) {
+    public void saveUser(Users user) {
         // Encode the user's password before saving
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
@@ -35,7 +36,7 @@ public class UserService {
     }
 
     public UserDetails loadUserDetails(String username) throws UsernameNotFoundException {
-        com.jooq.sample.model.tables.pojos.Users user = userRepository.findByUsername(username);
+        Users user = userRepository.findByUsername(username);
         if (user == null) {
             throw new UsernameNotFoundException("User not found with username: " + username);
         }
