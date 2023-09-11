@@ -1,6 +1,6 @@
 package com.example.EvidenNewsAggregator.controllers;
 
-import com.example.EvidenNewsAggregator.RegistrationRequest;
+import com.example.EvidenNewsAggregator.types.RegistrationRequest;
 import com.example.EvidenNewsAggregator.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

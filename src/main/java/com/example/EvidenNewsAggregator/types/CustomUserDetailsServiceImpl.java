@@ -1,4 +1,4 @@
-package com.example.EvidenNewsAggregator;
+package com.example.EvidenNewsAggregator.types;
 
 import com.example.EvidenNewsAggregator.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

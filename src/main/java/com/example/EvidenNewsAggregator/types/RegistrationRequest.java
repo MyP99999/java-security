@@ -1,4 +1,4 @@
-package com.example.EvidenNewsAggregator;
+package com.example.EvidenNewsAggregator.types;
 
 // RegistrationRequest.java
 
