@@ -4,6 +4,8 @@
 package com.example.EvidenNewsAggregator.entities.tables.pojos;
 
 
+import org.springframework.security.core.userdetails.UserDetails;
+
 import java.io.Serializable;
 
 

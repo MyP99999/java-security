@@ -1,4 +1,4 @@
-package com.example.EvidenNewsAggregator.repositories;
+package com.example.EvidenNewsAggregator.user;
 
 import com.example.EvidenNewsAggregator.entities.Tables;
 import com.example.EvidenNewsAggregator.entities.tables.pojos.Users;
@@ -31,6 +31,7 @@ public class UserRepository {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         dslContext.insertInto(Tables.USERS)
                 .set(Tables.USERS.USERNAME, user.getUsername())
+//                .set(Tables.USERS.EMAIL, user.getEmail())
                 .set(Tables.USERS.PASSWORD, user.getPassword())
                 // Set other user properties as needed
                 .execute();
